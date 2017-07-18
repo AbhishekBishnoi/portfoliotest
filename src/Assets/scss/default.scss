@@ -1,0 +1,98 @@
+
+$black: #010000;
+$white: #ffffff;
+$lightGrey: #e6e6e6;
+$darkGrey: #333;
+$red: #ff1755;
+$steelBlue: #4863A0;
+$pink: #F1694B;
+$purple: #6019E5;
+$lightGreen: #2FE519;
+
+@mixin translateY($e) {
+  -webkit-transform: translateY($e);
+    -moz-transform: translateY($e);
+          transform: translateY($e);
+}
+
+@mixin transition($e) {
+  -webkit-transition:$e;
+    -moz-transition:$e;
+          transition:$e;
+}
+
+
+header {
+  font-family: "Lucida Bright";
+  position: relative;
+  display: block;
+  background: $lightGrey;
+  color: $purple;
+  height: 100px;
+
+  .head{
+    font-size: 25px;
+    font-family: "Lucida Bright";
+    position: absolute;
+    top: 50% ; left: 15px;
+    @include translateY(-50%);
+  }
+
+  .detail{
+    font-size: 20px;
+    position: absolute;
+    top: 70%; left: 15px;
+    @include translateY(-50%);
+  }
+
+  nav,
+  nav ul,
+  nav ul li {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  nav {
+    font-size: 20px;
+    position: absolute;
+    top: 50%; right: 15px;
+    @include translateY(-50%);
+
+    ul li {
+
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+    a{
+      font-size: 19px;
+      color: $lightGreen;
+    }
+
+    a:hover{
+      color: red;
+    }
+    }
+
+}
+.contain{
+  margin: 15px;
+}
+
+.photo, .textarea{
+  float: left;
+  padding: 50px;
+}
+
+.photo{
+  //padding-top: 40px;
+  //padding-left: 50px;
+}
+
+.textarea{
+  //padding-top: 40px;
+  //padding-right: 200px;
+  //float: right;
+  font-size: 20px;
+}
